@@ -10,6 +10,7 @@ run:
                                        batch_size=20, num_workers=6)
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(net.parameters(), lr=opt.lr)
+    _,_=find_good_lr(train_loader,optimizer,net,criterion)
 
 then watch the saved picture to find a good initial learning rate                    
 '''
